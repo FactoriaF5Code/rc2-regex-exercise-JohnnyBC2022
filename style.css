@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #69c;
+}
+
+.nav__responsive-ul {
+  display: none;
+}
+
+nav {
+  background-color: crimson;
+}
+
+.nav__ul {
+  display: flex;
+}
+
+.nav__li {
+  padding: 0.9rem;
+  color: #fff;
+  cursor: pointer;
+}
+.nav__li:hover > a {
+  color: #ccc;
+}
+
+.nav__li a {
+  color: #fff;
+}
+
+.fa-html5 {
+  color: orangered;
+  border-radius: 5px;
+}
+.fa-css3-alt {
+  color: #48e;
+  border-radius: 5px;
+}
+.fa-js {
+  color: yellow;
+  border-radius: 5px;
+}
+.nav__li i {
+  text-align: right;
+  margin-right: 0.5rem;
+  font-size: 1.15rem;
+}
+.nav__responsive-button-container {
+  position: absolute;
+  width: 100%;
+  font-size: 1.5rem;
+  background-color: #69c;
+  margin-top: -2rem;
+  z-index: 100;
+}
+
+.nav__responsive-button {
+  font-size: 1.5rem;
+  padding: 0.4rem 1.25rem;
+  text-align: right;
+  width: 100%;
+}
+
+/* Formulario */
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.form__label {
+  display: block;
+  padding: 0.8rem 0;
+  cursor: pointer;
+}
+
+.form__input {
+  width: 100%;
+  background-color: #fff;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 3rem 0 0.75rem;
+  transition: 0.3s ease all;
+}
+
+.form__input:focus {
+  border: 3px solid #016;
+  outline: none;
+  background-color: #ccc;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.7);
+}
+
+.form__input-error {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+.form__input-error-active {
+  display: block;
+}
+.form__group-input {
+  position: relative;
+}
+.form__state-validation {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.75rem;
+  z-index: 100;
+  font-size: 1rem;
+  opacity: 0;
+}
+
+.form__checkbox {
+  margin-right: 0.8rem;
+}
+
+.form__group-terms,
+.form__msg,
+.form__group-btn-submit {
+  grid-column: span 2;
+}
+
+.form__msg {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  background-color: crimson;
+  border-radius: 4px;
+  padding: 0 1rem;
+  display: none;
+}
+
+.form__msg-active {
+  display: block;
+}
+
+.form__group-btn-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form__btn {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.3rem;
+  width: 30%;
+  border-radius: 4px;
+  background-color: crimson;
+  transition: 0.2s ease all;
+  cursor: pointer;
+}
+
+.form__btn:hover {
+  box-shadow: 3px 0 30px rgb(163, 163, 163 0.7);
+  transform: scale(1.05);
+  border: solid 1px white;
+}
+
+.form__msg-ok {
+  font-size: 0.9rem;
+  font-weight: bolder;
+  color: greenyellow;
+  padding: 1rem;
+  display: none;
+}
+
+.form__msg-ok-active {
+  display: block;
+}
+
+/* Estilos de validación */
+
+.form__group-ok .form__state-validation,
+.form__group-ok .form__label {
+  color: greenyellow;
+  font-weight: bolder;
+  opacity: 1;
+}
+.form__group-ok .form__input {
+  border: 3px solid rgb(64, 255, 47);
+}
+
+.form__group-nook .form__state-validation,
+.form__group-nook .form__label {
+  color: crimson;
+  font-weight: bolder;
+  opacity: 1;
+}
+
+.form__group-nook .form__input {
+  border: 3px solid crimson;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__ul {
+    display: none;
+  }
+
+  .nav {
+    height: 2.5rem;
+    width: 100%;
+    background-color: #69c;
+  }
+  .nav__responsive-ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: #69c;
+    margin-top: 2rem;
+  }
+  .nav__responsive-button-container {
+    background-color: crimson;
+  }
+  .nav__li-container {
+    position: relative;
+    height: 10rem;
+    top: -1000px;
+    transition: all 0.3s;
+    width: 70%;
+  }
+  .nav__responsive-li {
+    width: 100%;
+    padding: 1rem 1rem 0 1.25rem;
+    cursor: pointer;
+  }
+  .nav__responsive-li i {
+    text-align: center;
+    margin-right: 0.4rem;
+    width: 2rem;
+    font-size: 1.5rem;
+  }
+  .fa-home {
+    color: #fff;
+    font-size: 1;
+  }
+  .fa-css3-alt {
+    color: #016;
+    background-color: #69c;
+    border-radius: 5px;
+  }
+
+  .nav__responsive-li a {
+    color: #016;
+  }
+  .nav__responsive-li a:hover {
+    color: #ccc;
+  }
+
+  .nav__responsive-ul:hover > .nav__li-container {
+    top: 0;
+  }
+  /* Formulario */
+  .form {
+    margin-top: 10rem;
+    position: relative;
+    grid-template-columns: 1fr;
+    z-index: 200;
+  }
+
+  .form__group-terms,
+  .form__msg,
+  .form__group-btn-submit {
+    grid-column: 1;
+  }
+
+  .form__btn {
+    width: 100%;
+  }
+}
