@@ -4,7 +4,7 @@ const expresions = {
     dni: /^\d{8}[A-Za-z]$/, // 8 números y una letra
     user: /^[A-Za-záéíóúüñÑ\s_\-0-9.]{4,16}$/, //Letras, números, guión y guión bajo.
     pass: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/, /* Requiere al menos una letra, requiere al menos un dígito.Acepta caracteres alfabéticos, dígitos y algunos caracteres especiales, y exige un mínimo de 6 caracteres. */
-    pass2: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/,
+    /* pass2: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/, */
     email: /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/, /* El email debe de empezar por una cadena de caracteres que no empiecen por @ o espacio en blanco, compuesta por 1 o mas caracteres. Seguida del simbolo @. Seguida de una cadena de caracteres que no empiecen por @, "." o espacio en blanco, compuesta por 1 o mas caracteres. Seguida de un ".". Seguida  de una cadena de caracteres que no empiecen por @, "." o espacio en blanco, compuesta por 1 o mas caracteres. */
     phone: /^\d{9,14}$/ // de 9 a 14 números
 }
@@ -110,7 +110,7 @@ form.addEventListener('submit', (e) => {
 
     const terms = document.getElementById('terms');
 
-    
+
     if (fields.name && fields.surname && fields.dni && fields.user && fields.pass && fields.email && fields.phone && terms.checked) {
         form.reset();
 
@@ -122,7 +122,15 @@ form.addEventListener('submit', (e) => {
         document.querySelectorAll('.form__group-ok').forEach((icon) => {
             icon.classList.remove('form__group-ok');
         });
+        document.getElementById('form__msg').classList.remove('form__msg-active')
     } else {
-        document.getElementById('form__msg').classList.add('form_msg-active')
+        document.getElementById('form__msg').classList.add('form__msg-active')
     }
 })
+
+const clearForm = document.getElementById('form__btn-clear').addEventListener('click', function (e) {
+    e.preventDefault();
+    form.reset();
+    window.location.reload();
+});
+

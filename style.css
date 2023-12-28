@@ -136,7 +136,9 @@ nav {
 .form__msg {
   height: 2.5rem;
   line-height: 2.5rem;
+  letter-spacing: 0.5rem;
   background-color: crimson;
+  color: #fff;
   border-radius: 4px;
   padding: 0 1rem;
   display: none;
@@ -148,10 +150,12 @@ nav {
 
 .form__group-btn-submit {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 }
-.form__btn {
+.form__btn,
+.form__btn-clear {
   height: 2.5rem;
   line-height: 2.5rem;
   font-weight: bold;
@@ -164,18 +168,21 @@ nav {
   cursor: pointer;
 }
 
-.form__btn:hover {
+.form__btn:hover,
+.form__btn-clear:hover {
   box-shadow: 3px 0 30px rgb(163, 163, 163 0.7);
   transform: scale(1.05);
   border: solid 1px white;
 }
 
 .form__msg-ok {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: bolder;
   color: greenyellow;
   padding: 1rem;
   display: none;
+  grid-column: span 2;
+  text-align: center;
 }
 
 .form__msg-ok-active {
