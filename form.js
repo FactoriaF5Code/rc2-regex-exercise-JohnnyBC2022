@@ -1,12 +1,12 @@
 const expresions = {
-    name: /^[A-Za-záéíóúüñÑ\s-]{1,40}$/, //Letras que pueden llevar tildes (contiene la ñ) y espacios.
-    surname: /^[A-Za-záéíóúüñÑ\s-]{1,80}$/, //Letras que pueden llevar tildes y espacios.
-    dni: /^\d{8}[A-Za-z]$/, // 8 números y una letra
-    user: /^[A-Za-záéíóúüñÑ\s_\-0-9.]{4,16}$/, //Letras, números, guión y guión bajo.
-    pass: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/, /* Requiere al menos una letra, requiere al menos un dígito.Acepta caracteres alfabéticos, dígitos y algunos caracteres especiales, y exige un mínimo de 6 caracteres. */
+    name: /^[A-Za-záéíóúüñÑ\s-]{1,40}$/,
+    surname: /^[A-Za-záéíóúüñÑ\s-]{1,80}$/,
+    dni: /^\d{8}[A-Za-z]$/,
+    user: /^[A-Za-záéíóúüñÑ\s_\-0-9.]{4,16}$/,
+    pass: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/,
     pass2: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/,
-    email: /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/, /* El email debe de empezar por una cadena de caracteres que no empiecen por @ o espacio en blanco, compuesta por 1 o mas caracteres. Seguida del simbolo @. Seguida de una cadena de caracteres que no empiecen por @, "." o espacio en blanco, compuesta por 1 o mas caracteres. Seguida de un ".". Seguida  de una cadena de caracteres que no empiecen por @, "." o espacio en blanco, compuesta por 1 o mas caracteres. */
-    phone: /^\d{9,14}$/ // de 9 a 14 números
+    email: /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/,
+    phone: /^\d{9,14}$/
 }
 
 const fields = {
@@ -101,16 +101,16 @@ const validatePass2 = () => {
 
 inputs.forEach((input) => {
     input.addEventListener('keyup', validateForm);
-    input.addEventListener('blur', validateForm); // blur es cuando un elemento pierde el foco
+    input.addEventListener('blur', validateForm);
 });
 
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault(); //para que no envíe datos a ningún sitio
+    e.preventDefault();
 
     const terms = document.getElementById('terms');
 
-    
+
     if (fields.name && fields.surname && fields.dni && fields.user && fields.pass && fields.email && fields.phone && terms.checked) {
         form.reset();
 

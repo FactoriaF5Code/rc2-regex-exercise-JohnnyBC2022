@@ -56,171 +56,167 @@
     </header>
 
     <main>
-      
-        <form action="" class="form" id="form">
-          <!-- grupo Nombre -->
-          <div class="form__group" id="name__group">
-            <label for="name" class="form__label">Nombre:</label>
-            <div class="form__group-input">
-              <input
-                type="text"
-                class="form__input"
-                name="name"
-                id="name"
-                placeholder="escribe tu nombre..."
-              />
-              <i class="form__state-validation fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">
-              El nombre no puede exceder de 40 caracteres y no puede contener símbolos (excepto guión) ni números.
-            </p>
+      <form action="" class="form" id="form">
+        <div class="form__group" id="name__group">
+          <label for="name" class="form__label">Nombre:</label>
+          <div class="form__group-input">
+            <input
+              type="text"
+              class="form__input"
+              name="name"
+              id="name"
+              placeholder="escribe tu nombre..."
+            />
+            <i class="form__state-validation fas fa-times-circle"></i>
           </div>
-          <!-- grupo Apellidos -->
-          <div class="form__group" id="surname__group">
-            <label for="surname" class="form__label">Apellidos:</label>
-            <div class="form__group-input">
-              <input
-                type="text"
-                class="form__input"
-                name="surname"
-                id="surname"
-                placeholder="escribe tus apellidos..."
-              />
-              <i class="form__state-validation fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">
-              Los apellidos no pueden exceder de 80 caracteres y no puede contener símbolos (excepto guión) ni números.
-            </p>
-          </div>
-          <!-- grupo DNI -->
-          <div class="form__group" id="dni__group">
-            <label for="dni" class="form__label">DNI:</label>
-            <div class="form__group-input">
-              <input
-                type="text"
-                class="form__input"
-                name="dni"
-                id="dni"
-                placeholder="12345678A..."
-              />
-              <i class="form__state-validation fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">El número de DNI debe ser válido</p>
-          </div>
+          <p class="form__input-error">
+            El nombre no puede exceder de 40 caracteres y no puede contener
+            símbolos (excepto guión) ni números.
+          </p>
+        </div>
 
-          <!-- grupo usuario -->
-          <div class="form__group" id="user__group">
-            <label for="user" class="form__label">Usuario</label>
-            <div class="form__group-input">
-              <input
-                type="text"
-                class="form__input"
-                name="user"
-                id="user"
-                placeholder="nombre de usuario"
-              />
-              <i class="form__state-validation fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">
-              El nombre de usuario tiene que tener de 4 a 16 caracteres.
-            </p>
+        <div class="form__group" id="surname__group">
+          <label for="surname" class="form__label">Apellidos:</label>
+          <div class="form__group-input">
+            <input
+              type="text"
+              class="form__input"
+              name="surname"
+              id="surname"
+              placeholder="escribe tus apellidos..."
+            />
+            <i class="form__state-validation fas fa-times-circle"></i>
           </div>
+          <p class="form__input-error">
+            Los apellidos no pueden exceder de 80 caracteres y no puede contener
+            símbolos (excepto guión) ni números.
+          </p>
+        </div>
 
-          <!-- grupo Contraseña -->
-          <div class="form__group" id="pass__group">
-            <label for="pass" class="form__label">Contraseña:</label>
-            <div class="form__group-input">
-              <input
-                type="password"
-                class="form__input"
-                name="pass"
-                id="pass"
-                placeholder="escribe tu contraseña..."
-              />
-              <i class="form__state-validation fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">
-              La contraseña tiene que tener de 4 a 12 caracteres incluyendo
-              mayúsculas, números y símbolos
-            </p>
+        <div class="form__group" id="dni__group">
+          <label for="dni" class="form__label">DNI:</label>
+          <div class="form__group-input">
+            <input
+              type="text"
+              class="form__input"
+              name="dni"
+              id="dni"
+              placeholder="12345678A..."
+            />
+            <i class="form__state-validation fas fa-times-circle"></i>
           </div>
-          <!-- grupo Contraseña 2-->
-          <div class="form__group" id="pass2__group">
-            <label for="pass2" class="form__label">Repetir Contraseña:</label>
-            <div class="form__group-input">
-              <input
-                type="password"
-                class="form__input"
-                name="pass2"
-                id="pass2"
-                placeholder="repite tu contraseña..."
-              />
-              <i class="form__state-validation fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">Ambas contraseñas deben ser iguales</p>
-          </div>
-          <!-- grupo correo-->
-          <div class="form__group" id="email__group">
-            <label for="email" class="form__label">Correo electrónico:</label>
-            <div class="form__group-input">
-              <input
-                type="email"
-                class="form__input"
-                name="email"
-                id="email"
-                placeholder="introduce tu correo"
-              />
-              <i class="form__state-validation fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">
-              El correo electrónico sólo puede contener letras, números, puntos
-              y guiones bajos
-            </p>
-          </div>
+          <p class="form__input-error">El número de DNI debe ser válido</p>
+        </div>
 
-          <!-- grupo teléfono-->
-          <div class="form__group" id="phone__group">
-            <label for="phone" class="form__label">Teléfono:</label>
-            <div class="form__group-input">
-              <input
-                type="text"
-                class="form__input"
-                name="phone"
-                id="phone"
-                placeholder="introduce tu número de Teléfono"
-              />
-              <i class="form__state-validation fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">
-              Introduce un número de teléfono válido.
-            </p>
+        <div class="form__group" id="user__group">
+          <label for="user" class="form__label">Usuario</label>
+          <div class="form__group-input">
+            <input
+              type="text"
+              class="form__input"
+              name="user"
+              id="user"
+              placeholder="nombre de usuario"
+            />
+            <i class="form__state-validation fas fa-times-circle"></i>
           </div>
-          <!-- Grupo términos y condiciones -->
-          <div class="form__group-terms" id="form__group-terms">
-            <label for="terms" class="form__label">
-              <input
-                type="checkbox"
-                name="terms"
-                id="terms"
-                class="form__checkbox"
-              />
-              Acepto los términos y condiciones
-            </label>
-          </div>
+          <p class="form__input-error">
+            El nombre de usuario tiene que tener de 4 a 16 caracteres.
+          </p>
+        </div>
 
-          <div class="form__msg" id="form__msg">
-            <p>
-              <i class="fas fa-exclamation-triangle">
-                Error: Debes completar el formulario</i
-              >
-            </p>
+        <div class="form__group" id="pass__group">
+          <label for="pass" class="form__label">Contraseña:</label>
+          <div class="form__group-input">
+            <input
+              type="password"
+              class="form__input"
+              name="pass"
+              id="pass"
+              placeholder="escribe tu contraseña..."
+            />
+            <i class="form__state-validation fas fa-times-circle"></i>
           </div>
-          <div class="form__group-ok form__group-btn-submit">
-            <button type="submit" class="form__btn">Enviar</button>
-            <p class="form__msg-ok" id="form__msg-ok">Formulario enviado</p>
+          <p class="form__input-error">
+            La contraseña tiene que tener de 4 a 12 caracteres incluyendo
+            mayúsculas, números y símbolos
+          </p>
+        </div>
+
+        <div class="form__group" id="pass2__group">
+          <label for="pass2" class="form__label">Repetir Contraseña:</label>
+          <div class="form__group-input">
+            <input
+              type="password"
+              class="form__input"
+              name="pass2"
+              id="pass2"
+              placeholder="repite tu contraseña..."
+            />
+            <i class="form__state-validation fas fa-times-circle"></i>
           </div>
-        </form>
-      
+          <p class="form__input-error">Ambas contraseñas deben ser iguales</p>
+        </div>
+
+        <div class="form__group" id="email__group">
+          <label for="email" class="form__label">Correo electrónico:</label>
+          <div class="form__group-input">
+            <input
+              type="email"
+              class="form__input"
+              name="email"
+              id="email"
+              placeholder="introduce tu correo"
+            />
+            <i class="form__state-validation fas fa-times-circle"></i>
+          </div>
+          <p class="form__input-error">
+            El correo electrónico sólo puede contener letras, números, puntos y
+            guiones bajos
+          </p>
+        </div>
+
+        <div class="form__group" id="phone__group">
+          <label for="phone" class="form__label">Teléfono:</label>
+          <div class="form__group-input">
+            <input
+              type="text"
+              class="form__input"
+              name="phone"
+              id="phone"
+              placeholder="introduce tu número de Teléfono"
+            />
+            <i class="form__state-validation fas fa-times-circle"></i>
+          </div>
+          <p class="form__input-error">
+            Introduce un número de teléfono válido.
+          </p>
+        </div>
+
+        <div class="form__group-terms" id="form__group-terms">
+          <label for="terms" class="form__label">
+            <input
+              type="checkbox"
+              name="terms"
+              id="terms"
+              class="form__checkbox"
+            />
+            Acepto los términos y condiciones
+          </label>
+        </div>
+
+        <div class="form__msg" id="form__msg">
+          <p>
+            <i class="fas fa-exclamation-triangle">
+              Error: Debes completar el formulario</i
+            >
+          </p>
+        </div>
+        <div class="form__group-ok form__group-btn-submit">
+          <button type="submit" class="form__btn">Enviar</button>
+          <p class="form__msg-ok" id="form__msg-ok">Formulario enviado</p>
+        </div>
+      </form>
     </main>
     <script src="form.js"></script>
   </body>
