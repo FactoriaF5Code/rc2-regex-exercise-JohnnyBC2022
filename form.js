@@ -111,6 +111,7 @@ form.addEventListener('submit', (e) => {
     const terms = document.getElementById('terms');
 
 
+
     if (fields.name && fields.surname && fields.dni && fields.user && fields.pass && fields.email && fields.phone && terms.checked) {
         form.reset();
 
@@ -122,7 +123,15 @@ form.addEventListener('submit', (e) => {
         document.querySelectorAll('.form__group-ok').forEach((icon) => {
             icon.classList.remove('form__group-ok');
         });
+        document.getElementById('form__msg').classList.remove('form__msg-active')
     } else {
-        document.getElementById('form__msg').classList.add('form_msg-active')
+        document.getElementById('form__msg').classList.add('form__msg-active')
     }
 })
+
+const clearForm = document.getElementById('form__btn-clear').addEventListener('click', function (e) {
+    e.preventDefault();
+    form.reset();
+    window.location.reload();
+});
+
