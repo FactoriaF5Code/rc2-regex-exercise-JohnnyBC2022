@@ -4,7 +4,6 @@ const expresions = {
     dni: /^\d{8}[A-Za-z]$/,
     user: /^[A-Za-záéíóúüñÑ\s_\-0-9.]{4,16}$/,
     pass: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/,
-    pass2: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{6,}$/,
     email: /^[^@\s]+@[^@\.\s]+(\.[^@\.\s]+)+$/,
     phone: /^\d{9,14}$/
 }
@@ -109,7 +108,6 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const terms = document.getElementById('terms');
-
 
 
     if (fields.name && fields.surname && fields.dni && fields.user && fields.pass && fields.email && fields.phone && terms.checked) {
